@@ -70,3 +70,9 @@ model.fit(train_ds, validation_data=val_ds, epochs=epochs)
 
 # Save trained model
 model.save("flower_model.h5")
+
+import json
+
+# Save class names to a file
+with open("class_names.json", "w") as f:
+    json.dump(class_names, f)
